@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sommerhonning og lynghonning fra Åsnes Finnskog, og glass, lokk og utstyr til birøktere.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 40 40%27%3E%3Cpath d=%27M20 2.5 35.2 11.25v17.5L20 37.5 4.8 28.75v-17.5z%27 fill=%27%23e3a72c%27/%3E%3C/svg%3E">
+<title>Finnskoghonning</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#eff0ea;
+  --ground-2:#e4e6dc;
+  --paper:#f8f8f3;
+  --ink:#18221b;
+  --ink-2:#48524a;
+  --ink-3:#6c756c;
+  --line:#cfd3c6;
+  --spruce:#18241c;
+  --spruce-2:#223226;
+  --on-spruce:#eef0e6;
+  --on-spruce-2:#b4bdb0;
+  --honey:#e3a72c;
+  --honey-deep:#9b5a0a;
+  --honey-soft:#f6e2b0;
+  --lyng:#8a4a82;
+  --lyng-soft:#ecdcea;
+  --gold-a:#f2d27a;--gold-b:#b98a2a;
+  --glass:#ffffff;
+  --glass-line:#8e9a90;
+  --focus:#2f6fdb;
+  --shadow:0 1px 2px rgba(24,34,27,.06),0 8px 28px -12px rgba(24,34,27,.22);
+  --display:"Young Serif",Georgia,"Times New Roman",serif;
+  --body:"Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --gutter:clamp(16px,4vw,48px);
+  --max:1240px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#111812;--ground-2:#172019;--paper:#18211a;
+    --ink:#e9ece3;--ink-2:#b9c1b5;--ink-3:#8b958a;--line:#2d3a30;
+    --spruce:#0b110c;--spruce-2:#152018;--on-spruce:#eef0e6;--on-spruce-2:#a9b3a4;
+    --honey:#f0b43a;--honey-deep:#f0b43a;--honey-soft:#3a2c12;
+    --lyng:#c98bc0;--lyng-soft:#34202f;
+    --glass:#1d271f;--glass-line:#6f7c71;--focus:#8ab4ff;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#111812;--ground-2:#172019;--paper:#18211a;
+  --ink:#e9ece3;--ink-2:#b9c1b5;--ink-3:#8b958a;--line:#2d3a30;
+  --spruce:#0b110c;--spruce-2:#152018;--on-spruce:#eef0e6;--on-spruce-2:#a9b3a4;
+  --honey:#f0b43a;--honey-deep:#f0b43a;--honey-soft:#3a2c12;
+  --lyng:#c98bc0;--lyng-soft:#34202f;
+  --glass:#1d271f;--glass-line:#6f7c71;--focus:#8ab4ff;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px -12px rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+body{margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.01em;text-wrap:balance;margin:0}
+p{margin:0}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3)}
+.num{font-variant-numeric:tabular-nums}
+.btn{display:inline-flex;align-items:center;gap:.55em;font:600 15px/1 var(--body);padding:14px 20px;border-radius:999px;border:1px solid transparent;text-decoration:none;cursor:pointer;transition:transform .15s ease,background-color .2s ease}
+.btn:active{transform:scale(.97)}
+.btn-honey{background:var(--honey);color:#1b1406}
+.btn-honey:hover{background:#f0b847}
+.btn-ghost{border-color:currentColor;background:transparent;color:inherit}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--ground) 86%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.brand svg{width:30px;height:30px}
+.brand b{font:400 21px/1 var(--display);letter-spacing:-.01em}
+.nav{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{white-space:nowrap;text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2);padding:8px 12px;border-radius:999px}
+.nav a:hover{color:var(--ink);background:var(--ground-2)}
+.cartbtn{flex:none;display:inline-flex;align-items:center;gap:8px;font:600 14px/1 var(--body);background:var(--ink);color:var(--ground);border:0;border-radius:999px;padding:10px 14px;cursor:pointer;text-decoration:none}
+.cartbtn .n{background:var(--honey);color:#1b1406;border-radius:999px;min-width:22px;height:22px;display:inline-grid;place-items:center;font-size:12px;padding-inline:6px}
+@media (max-width:860px){.nav{display:none}.cartbtn{margin-left:auto}}
+
+/* hero */
+.hero{position:relative;color:#f4f3ea;background:#1d2a20;overflow:hidden;isolation:isolate}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.04);animation:drift 22s ease-out forwards}
+@keyframes drift{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,20,14,.25) 0%,rgba(12,20,14,.15) 35%,rgba(12,20,14,.78) 100%),linear-gradient(90deg,rgba(12,20,14,.55),transparent 60%)}
+.hero .wrap{padding-block:clamp(120px,22vw,260px) clamp(40px,6vw,72px);display:grid;gap:28px}
+.hero .eyebrow{color:#e7d9a6}
+.hero h1{font-size:clamp(46px,8.6vw,118px);max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--honey)}
+.hero p.lede{max-width:44ch;font-size:clamp(17px,1.7vw,20px);color:#e2e4d8}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px}
+.hero .meta{display:flex;flex-wrap:wrap;gap:8px 28px;margin-top:18px;padding-top:22px;border-top:1px solid rgba(255,255,255,.22);font-family:var(--mono);font-size:13px;color:#cfd3c4}
+.hero .meta b{color:#fff;font-weight:500}
+
+.notice{background:var(--honey);color:#1b1406}
+.notice .wrap{display:flex;gap:10px 22px;flex-wrap:wrap;align-items:center;padding-block:12px;font-weight:600;font-size:15px}
+.notice span{font-weight:400}
+
+section{padding-block:clamp(72px,10vw,132px)}
+.sec-head{display:grid;gap:18px;margin-bottom:clamp(36px,5vw,64px);max-width:760px}
+.sec-head h2{font-size:clamp(38px,5.4vw,72px)}
+.sec-head p{font-size:clamp(17px,1.5vw,19px);color:var(--ink-2);max-width:56ch}
+
+/* honey */
+.honeys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(16px,2.4vw,28px)}
+@media (max-width:820px){.honeys{grid-template-columns:1fr}}
+.honey-card{background:var(--paper);border-radius:22px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:var(--shadow)}
+.honey-card .ph{aspect-ratio:16/10;overflow:hidden;max-width:100%}
+.honey-card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.honey-card:hover .ph img{transform:scale(1.035)}
+.honey-card .body{padding:clamp(22px,3vw,36px);display:grid;gap:18px;align-content:start}
+.honey-card h3{font-size:clamp(32px,3.4vw,44px)}
+.honey-card .tag{justify-self:start;font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:7px 10px;border-radius:999px}
+.tag-s{background:var(--honey-soft);color:var(--honey-deep)}
+.tag-l{background:var(--lyng-soft);color:var(--lyng)}
+.honey-card p{color:var(--ink-2)}
+.scale{display:grid;gap:8px}
+.scale .bar{position:relative;height:10px;border-radius:99px;background:linear-gradient(90deg,#f7e7b0,#e9bb4d 35%,#c27918 65%,#6e3a0c)}
+.scale .dot{position:absolute;top:50%;width:22px;height:22px;border-radius:50%;border:3px solid var(--paper);box-shadow:0 0 0 1px var(--ink-3);transform:translate(-50%,-50%)}
+.scale .ends{display:flex;justify-content:space-between;font:12px var(--mono);color:var(--ink-3)}
+.buy-rows{display:grid;gap:8px;border-top:1px solid var(--line);padding-top:16px}
+.buy-row{display:flex;align-items:center;gap:12px}
+.buy-row .nm{flex:1;font-weight:500}
+.buy-row .pr{font-family:var(--mono);font-size:15px}
+.add{border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;font:600 14px/1 var(--body);padding:10px 14px;cursor:pointer;transition:background-color .2s,border-color .2s,transform .15s}
+.add:hover{border-color:var(--ink)}
+.add:active{transform:scale(.96)}
+.add.done{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.blend{margin-top:clamp(16px,2.4vw,28px);display:flex;gap:18px;align-items:flex-start;padding:22px clamp(20px,3vw,32px);border:1px dashed var(--line);border-radius:18px;color:var(--ink-2)}
+.blend b{color:var(--ink);font-family:var(--display);font-weight:400;font-size:20px;display:block;margin-bottom:4px}
+.blend .hx{flex:none;width:40px;height:40px}
+
+/* macro break */
+.macro{position:relative;min-height:clamp(320px,52vw,620px);background:#2a1e0c;overflow:hidden;display:grid;align-items:end;color:#fff;padding:0}
+.macro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.macro::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,12,2,.72),transparent 55%)}
+.macro .wrap{position:relative;z-index:1;padding-block:40px;width:100%}
+.macro blockquote{margin:0;font:400 clamp(26px,3.6vw,48px)/1.12 var(--display);max-width:22ch;text-wrap:balance}
+.macro cite{display:block;margin-top:14px;font:13px var(--mono);font-style:normal;color:#e5d6a8;letter-spacing:.06em}
+
+/* glass shop */
+#glass{background:var(--paper);border-block:1px solid var(--line)}
+.glass-top{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(24px,4vw,64px);align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+@media (max-width:900px){.glass-top{grid-template-columns:1fr}}
+.glass-top .sec-head{margin:0}
+.glass-photo{border-radius:20px;overflow:hidden;aspect-ratio:4/3;max-width:100%;box-shadow:var(--shadow)}
+.glass-photo img{width:100%;height:100%;object-fit:cover}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.facts span{font:500 13px/1 var(--mono);padding:9px 12px;border-radius:999px;background:var(--ground);border:1px solid var(--line);color:var(--ink-2)}
+
+.filters{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;margin-bottom:8px;scrollbar-width:none}
+.filters::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--ground);color:var(--ink-2);font:600 14px/1 var(--body);padding:11px 16px;border-radius:999px;cursor:pointer;transition:all .2s}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.byweight{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0 8px;font-size:14px;color:var(--ink-3)}
+.byweight button{border:0;background:transparent;font:500 13px/1 var(--mono);color:var(--ink-2);padding:8px 10px;border-radius:8px;cursor:pointer}
+.byweight button:hover{background:var(--ground-2)}
+.byweight button[aria-pressed="true"]{background:var(--honey-soft);color:var(--honey-deep)}
+
+.shop{display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:clamp(20px,3vw,40px);align-items:start;margin-top:18px}
+@media (max-width:1020px){.shop{grid-template-columns:1fr}}
+.shelves{display:grid;gap:10px;min-width:0}
+.shelf{min-width:0}
+.shelf-label{display:flex;justify-content:space-between;align-items:baseline;font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin:18px 0 0}
+.shelf-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:thin}
+.shelf-row{display:flex;align-items:flex-end;gap:clamp(14px,2vw,26px);padding:26px 10px 0;min-width:max-content;border-bottom:10px solid transparent;border-image:linear-gradient(180deg,#b88e5c,#8a6437) 1;position:relative}
+.jar{appearance:none;border:0;background:none;padding:0;cursor:pointer;display:grid;justify-items:center;gap:8px;color:var(--ink);position:relative;padding-bottom:6px}
+.jar svg{display:block;overflow:visible;transition:transform .35s cubic-bezier(.2,.8,.2,1),filter .3s}
+.jar:hover svg{transform:translateY(-6px)}
+.jar .lbl{font:500 11.5px/1.2 var(--mono);color:var(--ink-3);text-align:center;white-space:nowrap}
+.jar[aria-pressed="true"] .lbl{color:var(--ink);font-weight:500}
+.jar[aria-pressed="true"] .lbl::after{content:"";display:block;margin:6px auto 0;width:6px;height:6px;border-radius:50%;background:var(--honey)}
+.jar.dim{opacity:.28}
+.jar .honey-fill{transform-box:fill-box;transform-origin:bottom;transition:transform .9s cubic-bezier(.3,.7,.2,1)}
+.jar.pour .honey-fill{animation:pour 1.1s cubic-bezier(.3,.7,.2,1)}
+@keyframes pour{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+.scale-note{font-size:13px;color:var(--ink-3);margin-top:14px}
+
+.lids{display:flex;flex-wrap:wrap;align-items:flex-end;gap:18px;padding-top:22px}
+.lid{appearance:none;border:0;background:none;cursor:pointer;display:grid;justify-items:center;gap:8px;padding:0;color:var(--ink)}
+.lid .disc{border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3c4 0,var(--gold-a) 22%,var(--gold-b) 70%,#8a6418 100%);box-shadow:inset 0 0 0 2px rgba(0,0,0,.08),inset 0 -3px 6px rgba(0,0,0,.2),0 4px 10px -4px rgba(0,0,0,.4);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.lid:hover .disc{transform:rotate(-24deg) translateY(-4px)}
+.lid .lbl{font:500 11.5px/1 var(--mono);color:var(--ink-3)}
+.lid[aria-pressed="true"] .lbl{color:var(--ink)}
+
+.detail{position:sticky;top:88px;background:var(--ground);border:1px solid var(--line);border-radius:22px;padding:clamp(20px,2.4vw,28px);display:grid;gap:18px}
+.detail .kind{font:500 12px/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.detail h3{font-size:30px;line-height:1.1}
+.specs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.specs div{padding:12px 12px;display:grid;gap:4px;background:var(--paper)}
+.specs div+div{border-left:1px solid var(--line)}
+.specs dt{font:500 10.5px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.specs dd{margin:0;font:500 18px/1.1 var(--mono)}
+.price-line{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price-line .big{font:400 40px/1 var(--display)}
+.price-line small{color:var(--ink-3);font-size:14px}
+.detail .note{font-size:14px;color:var(--ink-2)}
+.calc{display:grid;gap:10px;padding:16px;border-radius:14px;background:var(--honey-soft);color:var(--ink)}
+.calc label{font-weight:600;font-size:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.calc input{width:88px;font:500 18px/1 var(--mono);padding:9px 10px;border-radius:10px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+.calc .out{font-size:15px;color:var(--ink-2)}
+.calc .out b{color:var(--ink);font-family:var(--mono);font-weight:500}
+.qty-row{display:flex;gap:10px;align-items:center}
+.stepper{display:flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:var(--paper)}
+.stepper button{width:40px;height:44px;border:0;background:transparent;font-size:20px;cursor:pointer;color:var(--ink);border-radius:999px}
+.stepper input{width:64px;text-align:center;border:0;background:transparent;font:500 17px/1 var(--mono);color:var(--ink)}
+.qty-row .btn{flex:1;justify-content:center}
+.btn-ink{background:var(--ink);color:var(--ground)}
+
+/* order */
+.order{margin-top:clamp(40px,5vw,64px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px);background:var(--spruce);color:var(--on-spruce);border-radius:26px;padding:clamp(24px,4vw,48px)}
+@media (max-width:900px){.order{grid-template-columns:1fr}}
+.order h3{font-size:clamp(30px,3.4vw,44px)}
+.order .eyebrow{color:var(--on-spruce-2)}
+.order p{color:var(--on-spruce-2)}
+.lines{list-style:none;margin:18px 0 0;padding:0;display:grid}
+.lines li{display:grid;grid-template-columns:auto 1fr auto auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.lines .q{font:500 15px/1 var(--mono);color:var(--honey)}
+.lines .t{font-size:15px}
+.lines .s{font:15px var(--mono)}
+.lines .x{border:0;background:transparent;color:var(--on-spruce-2);cursor:pointer;font-size:20px;line-height:1;padding:4px 8px;border-radius:6px}
+.lines .x:hover{color:#fff;background:rgba(255,255,255,.1)}
+.sum{display:flex;justify-content:space-between;align-items:baseline;padding-top:16px;font-size:15px;color:var(--on-spruce-2)}
+.sum b{font:400 32px/1 var(--display);color:#fff}
+.empty{padding:28px 0;color:var(--on-spruce-2);border-bottom:1px solid rgba(255,255,255,.12)}
+.mail{background:var(--spruce-2);border-radius:18px;padding:clamp(18px,2.4vw,26px);display:grid;gap:14px;align-content:start}
+.mail pre{margin:0;white-space:pre-wrap;font:13.5px/1.6 var(--mono);color:#e7e9df;max-height:320px;overflow:auto}
+.mail .to{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:15px}
+.mail .to code{font:500 15px var(--mono);color:var(--honey);user-select:all}
+.copy{border:1px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:999px;font:600 13px/1 var(--body);padding:9px 13px;cursor:pointer}
+.copy:hover{background:rgba(255,255,255,.08)}
+.pay{font-size:14px;color:var(--on-spruce-2)}
+
+/* gear */
+.flow{list-style:none;padding:0;margin:0 0 clamp(40px,5vw,64px);display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+@media (max-width:900px){.flow{grid-template-columns:1fr}}
+.flow li{padding:22px 18px 22px 0;display:grid;gap:8px;align-content:start}
+@media (min-width:901px){.flow li+li{padding-left:18px;border-left:1px solid var(--line)}}
+@media (max-width:900px){.flow li{border-bottom:1px solid var(--line);grid-template-columns:48px 1fr;column-gap:12px}.flow li .d{grid-column:2}}
+.flow .i{font:400 34px/1 var(--display);color:var(--honey-deep)}
+.flow a{font-weight:600;font-size:18px;text-decoration:none}
+.flow a:hover{text-decoration:underline;text-underline-offset:3px}
+.flow .d{font-size:14.5px;color:var(--ink-2)}
+.gear{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(20px,3vw,40px);align-items:start}
+@media (max-width:900px){.gear{grid-template-columns:1fr}}
+.starter{background:var(--spruce);color:var(--on-spruce);border-radius:22px;overflow:hidden;display:grid}
+.starter .ph{aspect-ratio:4/3;max-width:100%;overflow:hidden}
+.starter .ph img{width:100%;height:100%;object-fit:cover}
+.starter .body{padding:clamp(22px,3vw,32px);display:grid;gap:14px}
+.starter h3{font-size:34px}
+.starter p{color:var(--on-spruce-2)}
+.pack{display:flex;align-items:center;gap:12px;padding:14px 0;border-top:1px solid rgba(255,255,255,.14)}
+.pack .nm{flex:1}
+.pack .nm b{display:block;font-weight:600}
+.pack .nm span{font-size:14px;color:var(--on-spruce-2)}
+.pack .pr{font:15px var(--mono)}
+.starter .add{color:var(--on-spruce);border-color:rgba(255,255,255,.3)}
+.starter .add.done{background:var(--honey);color:#1b1406;border-color:var(--honey)}
+.best{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--line)}
+@media (max-width:560px){.best{grid-template-columns:1fr}}
+.best .it{display:flex;align-items:center;gap:12px;padding:16px 0;border-bottom:1px solid var(--line)}
+@media (min-width:561px){.best .it:nth-child(odd){padding-right:20px}.best .it:nth-child(even){padding-left:20px;border-left:1px solid var(--line)}}
+.best .nm{flex:1;font-weight:500}
+.best .nm span{display:block;font-size:13px;color:var(--ink-3);font-weight:400}
+.best .pr{font:15px var(--mono)}
+.cats{margin-top:28px;display:flex;flex-wrap:wrap;gap:8px}
+.cats a{font-size:14px;text-decoration:none;padding:9px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+.cats a:hover{border-color:var(--ink);color:var(--ink)}
+.subhead{font:400 26px/1.1 var(--display);margin-bottom:14px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.subhead a{font:500 14px var(--body);color:var(--ink-3)}
+
+/* story */
+#historien{background:var(--spruce);color:var(--on-spruce)}
+#historien .eyebrow{color:var(--on-spruce-2)}
+.story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,80px);align-items:start}
+@media (max-width:900px){.story{grid-template-columns:1fr}}
+.story .q{font:400 clamp(30px,3.8vw,52px)/1.1 var(--display);text-wrap:balance}
+.story .q em{font-style:normal;color:var(--honey)}
+.story .by{margin-top:18px;font:13px var(--mono);color:var(--on-spruce-2)}
+.story-ph{margin-top:36px;border-radius:20px;overflow:hidden;aspect-ratio:3/2;max-width:100%}
+.story-ph img{width:100%;height:100%;object-fit:cover}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:62px;top:8px;bottom:8px;width:1px;background:rgba(255,255,255,.18)}
+.tl li{display:grid;grid-template-columns:62px 1fr;gap:26px;padding:0 0 30px;position:relative}
+.tl li::before{content:"";position:absolute;left:58px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--honey);box-shadow:0 0 0 4px var(--spruce)}
+.tl .y{font:500 15px/1.4 var(--mono);color:var(--honey)}
+.tl b{display:block;font:400 22px/1.2 var(--display);margin-bottom:6px;color:#fff}
+.tl p{color:var(--on-spruce-2);font-size:16px}
+.share{margin-top:10px;padding:22px;border-radius:18px;background:var(--spruce-2);display:grid;gap:12px}
+.share .bars{display:flex;height:14px;border-radius:99px;overflow:hidden}
+.share .bars i{display:block}
+.share .leg{display:flex;justify-content:space-between;font:13px var(--mono);color:var(--on-spruce-2)}
+
+/* where */
+.where{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,3vw,40px)}
+@media (max-width:900px){.where{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(22px,3vw,34px);display:grid;gap:16px;align-content:start}
+.card h3{font-size:30px}
+.shops{list-style:none;margin:0;padding:0;display:grid}
+.shops li{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);font-weight:500}
+.shops li span{font-weight:400;color:var(--ink-3);font-size:14px;text-align:right}
+.visit{display:grid;gap:14px}
+.addr{font:400 26px/1.25 var(--display)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:10px 18px;font-size:15px}
+.kv dt{font:500 12px/1.6 var(--mono);text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3)}
+.kv dd{margin:0}
+.kv code{font:500 15px var(--mono);user-select:all}
+.ship{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ship li{display:grid;grid-template-columns:22px 1fr;gap:10px;color:var(--ink-2);font-size:15.5px}
+.ship li svg{margin-top:3px}
+
+footer{background:var(--spruce);color:var(--on-spruce-2);padding-block:56px 40px;font-size:14px}
+footer .wrap{display:grid;gap:28px}
+.foot-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;align-items:flex-end}
+.foot-top .brand b{color:#fff;font-size:30px}
+.foot-top .brand svg{width:40px;height:40px}
+.credits{font-size:12px;line-height:1.7;border-top:1px solid rgba(255,255,255,.12);padding-top:20px}
+.credits a{color:inherit}
+
+.dock{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:50;display:flex;align-items:center;gap:12px;background:var(--ink);color:var(--ground);border-radius:999px;padding:10px 10px 10px 20px;box-shadow:0 12px 40px -10px rgba(0,0,0,.5);transform:translateY(140%);transition:transform .4s cubic-bezier(.2,.8,.2,1);max-width:520px;margin-inline:auto}
+.dock.on{transform:none}
+.dock span{flex:1;font-weight:500;font-size:15px}
+.dock .btn{padding:11px 16px}
+@media (min-width:1021px){.dock{display:none}}
+
+.toast{position:fixed;left:50%;top:calc(76px + env(safe-area-inset-top,0px));transform:translate(-50%,-20px);opacity:0;background:var(--ink);color:var(--ground);padding:10px 16px;border-radius:999px;font-weight:600;font-size:14px;z-index:60;pointer-events:none;transition:all .3s}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Finnskoghonning, til toppen">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2.5 35.2 11.25v17.5L20 37.5 4.8 28.75v-17.5z" fill="var(--honey)"/><path d="M20 11c-3 4.2-5.2 7.6-5.2 10.6a5.2 5.2 0 0 0 10.4 0C25.2 18.6 23 15.2 20 11z" fill="var(--spruce)"/></svg>
+      <b>Finnskoghonning</b>
+    </a>
+    <nav class="nav" aria-label="Hovedmeny">
+      <a href="#honning">Honning</a>
+      <a href="#glass">Glass og lokk</a>
+      <a href="#utstyr">Biutstyr</a>
+      <a href="#historien">Historien</a>
+      <a href="#besok">Besøk oss</a>
+    </nav>
+    <a class="cartbtn" href="#bestilling">Bestilling <span class="n num" id="cartN">0</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <img src="img/tjern.jpg" alt="Et stille tjern omkranset av furu og myr på Finnskogen" fetchpriority="high">
+    <div class="wrap">
+      <span class="eyebrow">Åsnes Finnskog · siden 1995</span>
+      <h1>Honning fra 400 meter <em>over havet</em></h1>
+      <p class="lede">Sommerhonning og lynghonning fra bigårdene rundt Veltavegen. Og glassene, lokkene og utstyret som birøktere over hele landet henter hos oss.</p>
+      <div class="ctas">
+        <a class="btn btn-honey" href="#glass">Finn riktig glass
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="#honning">Kjøp honning</a>
+      </div>
+      <div class="meta">
+        <span><b>27</b> glass, flasker og lokk</span>
+        <span><b>2</b> honningsorter</span>
+        <span>Ring <b>911 44 774</b></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="notice" role="note">
+    <div class="wrap">Bestill glass i god tid. <span>Vi pakker fortløpende, men i sesong kan det bli litt venting.</span></div>
+  </div>
+
+  <!-- HONNING -->
+  <section id="honning">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Honningen</span>
+        <h2>To sorter. Ingen blandet sammen.</h2>
+        <p>Biene samler fra blomstene tidlig på sommeren, og fra røsslyngen på høsten. Vi rører aldri to honningtyper sammen, så det du smaker er ett trekk fra én tid på året.</p>
+      </div>
+      <div class="honeys">
+        <article class="honey-card">
+          <div class="ph"><img src="img/honeyjar.jpg" alt="Lys, gyllen honning som renner fra et glass" loading="lazy"></div>
+          <div class="body">
+            <span class="tag tag-s">Juni – juli</span>
+            <h3>Sommerhonning</h3>
+            <p>Også kalt blomsterhonning. Mild, lys og rund. Smak, lukt og farge varierer fra bigård til bigård, og fra år til år.</p>
+            <div class="scale" aria-label="Smak: mild">
+              <div class="bar"><span class="dot" style="left:18%;background:#f0cf6e"></span></div>
+              <div class="ends"><span>mild · lys</span><span>kraftig · mørk</span></div>
+            </div>
+            <div class="buy-rows">
+              <div class="buy-row"><span class="nm">500 g</span><span class="pr num">kr 200</span><button class="add" data-add="som500">Legg til</button></div>
+              <div class="buy-row"><span class="nm">1 kg</span><span class="pr num">kr 280</span><button class="add" data-add="som1000">Legg til</button></div>
+            </div>
+          </div>
+        </article>
+        <article class="honey-card">
+          <div class="ph"><img src="img/heather2.jpg" alt="Røsslyng i full blomst i skogkanten" loading="lazy"></div>
+          <div class="body">
+            <span class="tag tag-l">August – september</span>
+            <h3>Lynghonning</h3>
+            <p>Kubene vandrer til røsslyngen på sensommeren. Honningen blir sterkere, mørkere og nesten geléaktig, med den litt bitre, blomstrete tonen lyngen er kjent for.</p>
+            <div class="scale" aria-label="Smak: kraftig">
+              <div class="bar"><span class="dot" style="left:72%;background:#b86c1a"></span></div>
+              <div class="ends"><span>mild · lys</span><span>kraftig · mørk</span></div>
+            </div>
+            <div class="buy-rows">
+              <div class="buy-row"><span class="nm">1 kg</span><span class="pr num">kr 280</span><button class="add" data-add="lyng1000">Legg til</button></div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="blend">
+        <svg class="hx" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2.5 35.2 11.25v17.5L20 37.5 4.8 28.75v-17.5z" fill="none" stroke="var(--honey-deep)" stroke-width="1.6" stroke-dasharray="3 3"/><path d="M20 2.5V37.5" stroke="var(--honey-deep)" stroke-width="1.2"/></svg>
+        <p><b>Blandingshonning, de årene det skjer</b>Kuber som ikke blir med på lyngtrekket høstes sent. Da har biene gjerne hentet fra både sommerblomster og røsslyng selv. Ikke hvert år, og aldri blandet av oss.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="macro">
+    <img src="img/carnica.jpg" alt="Nærbilde av en honningbie som arbeider på en voksramme" loading="lazy">
+    <div class="wrap">
+      <blockquote>Honning med den gode smaken.<cite>FINNSKOGHONNING · SIDEN 1995</cite></blockquote>
+    </div>
+  </section>
+
+  <!-- GLASS -->
+  <section id="glass">
+    <div class="wrap">
+      <div class="glass-top">
+        <div class="sec-head">
+          <span class="eyebrow">Glassbutikken · for birøktere</span>
+          <h2>Riktig glass til hver høsting</h2>
+          <p>Fra 30 gram smaksglass til 20 kilos spann. Alle priser er per stykk med lokk og inkludert mva. Trykk på et glass for mål, lokkstørrelse og hvor mange du trenger.</p>
+          <div class="facts"><span>Pris inkl. lokk</span><span>Inkl. 25 % mva</span><span>Faktura før sending</span></div>
+        </div>
+        <div class="glass-photo"><img src="img/volle.jpg" alt="Hyller med fylte honningglass med gullokk" loading="lazy"></div>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filtrer etter type" id="filters"></div>
+      <div class="byweight" role="group" aria-label="Velg etter mengde honning" id="byweight"><span>Hvor mye honning per glass?</span></div>
+
+      <div class="shop">
+        <div>
+          <div class="shelves" id="shelves"></div>
+          <p class="scale-note">Tegnet omtrent i skala. 730 ml-glasset er 136 mm høyt og 94 mm bredt, de andre er beregnet ut fra det. Ring for nøyaktige mål.</p>
+        </div>
+        <aside class="detail" id="detail" aria-live="polite"></aside>
+      </div>
+
+      <div class="order" id="bestilling">
+        <div>
+          <span class="eyebrow">Din bestilling</span>
+          <h3>Bestillingsliste</h3>
+          <ul class="lines" id="lines"></ul>
+          <div class="sum"><span>Sum inkl. mva, før frakt</span><b class="num" id="sum">kr 0</b></div>
+        </div>
+        <div class="mail">
+          <div class="to">Send listen til <code id="mailaddr">post@finnskoghonning.no</code> <button class="copy" data-copy="mailaddr">Kopier adresse</button></div>
+          <pre id="mailtext"></pre>
+          <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn btn-honey" id="copyOrder">Kopier bestillingen</button></div>
+          <p class="pay">Du får faktura, og vi sender når den er betalt. Eller ring <b style="color:#fff">911 44 774</b> og les opp listen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UTSTYR -->
+  <section id="utstyr">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Biutstyr</span>
+        <h2>Fra bigården til slyngerommet</h2>
+        <p>Siden 2011 har vi solgt utstyr til andre birøktere, og i dag er det tre fjerdedeler av det vi gjør. Slyngerommet, i den rekkefølgen du trenger det:</p>
+      </div>
+      <ol class="flow">
+        <li><span class="i">1</span><a href="https://finnskoghonning.no/PS_Finnskog/16-skrelle-og-losne">Skrelle og løsne</a><span class="d">Avdekkingsgaffler og -kniver. Lynghonning må løsnes før den slipper.</span></li>
+        <li><span class="i">2</span><a href="https://finnskoghonning.no/PS_Finnskog/17-slynge">Slynge</a><span class="d">Slynger for rammene, fra hobbykube til næring.</span></li>
+        <li><span class="i">3</span><a href="https://finnskoghonning.no/PS_Finnskog/18-sile">Sile</a><span class="d">Siler som tar voks og rester uten å ta smaken.</span></li>
+        <li><span class="i">4</span><a href="https://finnskoghonning.no/PS_Finnskog/19-rore">Røre</a><span class="d">Rørere som gir fast, kremet honning.</span></li>
+        <li><span class="i">5</span><a href="https://finnskoghonning.no/PS_Finnskog/20-tappe">Tappe</a><span class="d">Tappekar og kraner, rett ned i glassene over.</span></li>
+      </ol>
+
+      <div class="gear">
+        <article class="starter">
+          <div class="ph"><img src="img/bees.jpg" alt="Birøkter løfter en ramme full av bier opp av kuben" loading="lazy"></div>
+          <div class="body">
+            <span class="eyebrow" style="color:var(--on-spruce-2)">Ny birøkter?</span>
+            <h3>Startpakkene</h3>
+            <p>Alt for første sesong, satt sammen av noen som har drevet med bier i 30 år.</p>
+            <div class="pack"><div class="nm"><b>Start 1</b><span>Personlig utstyr i bigården</span></div><span class="pr num">kr 1 600</span><button class="add" data-add="start1">Legg til</button></div>
+            <div class="pack"><div class="nm"><b>Start 2</b><span>Den første bikuba</span></div><span class="pr num">kr 2 600</span><button class="add" data-add="start2">Legg til</button></div>
+          </div>
+        </article>
+        <div>
+          <div class="subhead">Mest kjøpt <a href="https://finnskoghonning.no/PS_Finnskog/bestselgere">Se alle</a></div>
+          <div class="best" id="best"></div>
+          <div class="cats">
+            <a href="https://finnskoghonning.no/PS_Finnskog/9-drakter-og-hansker">Drakter og hansker</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/10-redskap">Redskap</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/11-kubemateriell">Kubemateriell</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/13-dronningavlutstyr">Dronningavl</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/14-utstyr-til-vandring">Utstyr til vandring</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/15-for-og-foringsutstyr">Fôr og fôring</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/30-boker">Bøker</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/29-salgsmateriell">Salgsmateriell</a>
+            <a href="https://finnskoghonning.no/PS_Finnskog/32-brukt-utstyr">Brukt utstyr</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIEN -->
+  <section id="historien">
+    <div class="wrap story">
+      <div>
+        <span class="eyebrow">Historien</span>
+        <p class="q" style="margin-top:18px">«Hva skal man bruke 10 daa <em>steinrik jord</em> til, uten redskap, 400 m over havet?»</p>
+        <p class="by">ODD JOHNNY TØRRISSEN, BIRØKTER</p>
+        <div class="story-ph"><img src="img/flisberget.jpg" alt="Gammelt tun ved skogkanten på Finnskogen en sommerkveld" loading="lazy"></div>
+      </div>
+      <div>
+        <ol class="tl">
+          <li><span class="y">1994</span><div><b>Hjemstedet med driveplikt</b><p>Gården på Finnskogen skulle drives. Svaret ble noen bikuber, og juletrær.</p></div></li>
+          <li><span class="y">1995</span><div><b>Den første honningen</b><p>En hobby som vokste seg stor, sesong for sesong.</p></div></li>
+          <li><span class="y">2004</span><div><b>Birøkt blir næring</b><p>Sjansen ble tatt. Biene ble jobben.</p></div></li>
+          <li><span class="y">2009</span><div><b>Landhandelen blir honninghus</b><p>En nedlagt landhandel ble kjøpt og bygd om. Her slynges, tappes og selges honningen i dag.</p></div></li>
+          <li><span class="y">2011</span><div><b>Utstyr til andre birøktere</b><p>Glass, kasser og slynger. Det som startet som en tjeneste, er i dag det meste av driften.</p></div></li>
+        </ol>
+        <div class="share" role="img" aria-label="Omsetning i dag: 75 prosent utstyr, 25 prosent honning">
+          <div class="bars"><i style="width:75%;background:var(--honey)"></i><i style="width:25%;background:#8a4a82"></i></div>
+          <div class="leg"><span>Utstyr og glass · 75 %</span><span>Honning · 25 %</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BESØK -->
+  <section id="besok">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Finn oss</span>
+        <h2>Honningen står på disken i Solør</h2>
+      </div>
+      <div class="where">
+        <div class="card">
+          <h3>Her kan du kjøpe honningen</h3>
+          <ul class="shops">
+            <li>Honninghuset <span>Veltavegen 311, etter avtale</span></li>
+            <li>Bondens marked <span>torgsalg</span></li>
+            <li>Solørtorget <span>torgsalg</span></li>
+            <li>Snarkjøp Kilen <span>Finnskogen</span></li>
+            <li>Finnskogtoppen <span>Finnskogen</span></li>
+            <li>Finnskogen Kro og Motell <span>Finnskogen</span></li>
+            <li>Esso Kirkenær <span>Kirkenær</span></li>
+            <li>Livets Krydder <span>Kirkenær</span></li>
+          </ul>
+        </div>
+        <div class="card visit">
+          <h3>Hent selv eller få det sendt</h3>
+          <p class="addr">Veltavegen 311<br>2283 Åsnes Finnskog</p>
+          <dl class="kv">
+            <dt>Telefon</dt><dd><code>911 44 774</code>, ring før du kommer</dd>
+            <dt>E-post</dt><dd><code>post@finnskoghonning.no</code></dd>
+            <dt>Åpent</dt><dd>Etter avtale</dd>
+          </dl>
+          <ul class="ship">
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5z" fill="var(--honey)"/></svg>Posten er billigst for små pakker, og prisen er lik i hele landet. Oppgi mobilnummer, så får du varsel når pakken er fremme.</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5z" fill="var(--honey)"/></svg>Glass er tungt. Vi pakker maks 16–17 kg per kolli, så ingenting knuser på veien.</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5z" fill="var(--honey)"/></svg>Store bestillinger går med varetaxi eller lastebil. Noen ganger kjører vi ut selv og samler flere leveranser.</li>
+            <li><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5 13.6 4.75v6.5L8 14.5 2.4 11.25v-6.5z" fill="var(--honey)"/></svg>Hent pakken på Posten. Pakker som går i retur, betaler du frakten for begge veier.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <a class="brand" href="#top"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2.5 35.2 11.25v17.5L20 37.5 4.8 28.75v-17.5z" fill="var(--honey)"/><path d="M20 11c-3 4.2-5.2 7.6-5.2 10.6a5.2 5.2 0 0 0 10.4 0C25.2 18.6 23 15.2 20 11z" fill="var(--spruce)"/></svg><b>Finnskoghonning</b></a>
+      <p>Veltavegen 311, 2283 Åsnes Finnskog · 911 44 774 · post@finnskoghonning.no</p>
+    </div>
+    <p>Finnskoghonning er et registrert varemerke, underenhet av org.nr. 973 056 832 Odd Johnny Tørrissen. Honning som heter «Honning fra Finnskogen» eller lignende, er ikke fra oss.</p>
+    <p class="credits">Designforslag. Foto via Wikimedia Commons: Tjern på Finnskogen av H.tjerns (CC BY-SA), røsslyng av Green Yoshi (CC BY-SA), honning av ProjectManhattan (CC BY-SA), honningbie av Richard Bartz (CC BY-SA), honningglass av Waugsberg (CC BY-SA), tun på Flisberget av Ingunn Holm (CC BY-SA), bieramme av Healthnutlady (CC BY). Glass og lokk er tegnet for denne siden.</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock"><span id="dockTxt"></span><a class="btn btn-honey" href="#bestilling">Se listen</a></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+// ---------- data ----------
+// w/h in mm (approx, scaled from 730ml = 136 x 94), g = grams honey, lid = mm
+const JARS=[
+ {id:'r21',cat:'rund',name:'21 ml glass, rund',short:'21 ml',ml:21,g:30,lid:43,p:7,shape:'round',w:44,h:44,note:'Smaksglass og gaver.'},
+ {id:'r65',cat:'rund',name:'65 ml glass, lav og bred',short:'65 ml',ml:65,g:null,lid:66,p:16,shape:'round',w:74,h:40,note:'Lav og bred. Fin til smaksprøver og kremet honning.'},
+ {id:'r99',cat:'rund',name:'99 ml «krydderglass»',short:'99 ml',ml:99,g:null,lid:43,p:7,shape:'round',w:48,h:92,note:'Høyt og smalt.'},
+ {id:'r125',cat:'rund',name:'125 ml glass, rund',short:'125 ml',ml:125,g:150,lid:66,p:9.5,shape:'round',w:74,h:56},
+ {id:'r212',cat:'rund',name:'212 ml glass',short:'212 ml',ml:212,g:250,lid:66,p:10.5,shape:'round',w:74,h:78},
+ {id:'r300',cat:'rund',name:'300 ml glass, rund',short:'300 ml',ml:300,g:350,lid:70,p:11,shape:'round',w:80,h:92},
+ {id:'r405',cat:'rund',name:'405 ml glass, rund',short:'405 ml',ml:405,g:500,lid:82,p:13.5,shape:'round',w:94,h:88},
+ {id:'r535',cat:'rund',name:'535 ml glass, rund',short:'535 ml',ml:535,g:700,lid:82,p:13.5,shape:'round',w:94,h:108,note:'Selges i brett med 12. 2 304 stk på en full pall.'},
+ {id:'r730',cat:'rund',name:'730 ml glass, rund',short:'730 ml',ml:730,g:1000,lid:82,p:19,shape:'round',w:94,h:136,note:'Målt: 136 mm høyt, 94 mm bredt.'},
+ {id:'h100',cat:'6kant',name:'100 ml 6-kant glass',short:'100 ml',ml:100,g:125,lid:53,p:9.5,shape:'hex',w:58,h:68},
+ {id:'h196',cat:'6kant',name:'196 ml 6-kant glass',short:'196 ml',ml:196,g:250,lid:58,p:10.5,shape:'hex',w:66,h:88},
+ {id:'h390',cat:'6kant',name:'390 ml 6-kant glass',short:'390 ml',ml:390,g:500,lid:70,p:14,shape:'hex',w:82,h:110},
+ {id:'s100',cat:'spesial',name:'Designglass med kork og honningdypper',short:'100 ml',ml:100,g:null,lid:null,p:25,shape:'design',w:62,h:96,note:'Kork med honningdypper i tre. Gaveglasset.',lidTxt:'Kork'},
+ {id:'s410',cat:'spesial',name:'410 ml glass med svart DTO-lokk',short:'410 ml',ml:410,g:500,lid:null,p:16,shape:'dto',w:82,h:112,note:'Deep Twist-lokk i svart. Moderne og tett.',lidTxt:'DTO'},
+ {id:'f250',cat:'flasker',name:'Saft- og vinflaske «Bordeaux», 250 ml',short:'250 ml',ml:250,g:null,lid:null,p:13.5,shape:'bottle',w:56,h:190,note:'Med kapsel (skrukork). Til mjød, saft og sirup.',lidTxt:'Kapsel'},
+ {id:'f750',cat:'flasker',name:'Saft- og vinflaske «Bordeaux», 750 ml',short:'750 ml',ml:750,g:null,lid:null,p:14,shape:'bottle',w:76,h:300,note:'Med kapsel (skrukork).',lidTxt:'Kapsel'},
+ {id:'f250s',cat:'flasker',name:'PET squeeze-flaske, oval, 250 ml',short:'250 ml',ml:250,g:350,lid:null,p:10.5,shape:'squeeze',w:66,h:162,note:'Til flytende honning. Med kapsel.',lidTxt:'Kapsel'},
+ {id:'p365',cat:'plast',name:'365 ml plastbeger, klar',short:'365 ml',ml:365,g:450,lid:null,p:5,shape:'cup',w:96,h:70,note:'Med hvitt lokk. Lett å sende.',lidTxt:'Hvitt'},
+ {id:'p870',cat:'plast',name:'870 ml plastbeger, klar',short:'870 ml',ml:870,g:1000,lid:null,p:7,shape:'cup',w:118,h:108,note:'Med hvitt lokk.',lidTxt:'Hvitt'},
+ {id:'p2500',cat:'plast',name:'2 500 ml spann, hvit',short:'3 kg',ml:2500,g:3000,lid:null,p:17.5,shape:'pail',w:170,h:150,note:'Med hvitt lokk og hank.',lidTxt:'Hvitt'},
+ {id:'p20',cat:'plast',name:'Honningspann 20 kg (17,7 liter), hvit',short:'20 kg',ml:17700,g:20000,lid:null,p:85,shape:'pail',w:290,h:320,note:'Til lagring og salg i bulk. Med hvitt lokk.',lidTxt:'Hvitt'},
+];
+const LIDS=[43,53,58,66,70,82].map(mm=>({id:'l'+mm,cat:'lokk',name:mm+' mm lokk, gull',short:mm+' mm',mm,p:3.5,shape:'lid'}));
+const OTHER=[
+ {id:'som500',name:'Sommerhonning 500 g',p:200},{id:'som1000',name:'Sommerhonning 1 kg',p:280},{id:'lyng1000',name:'Lynghonning 1 kg',p:280},
+ {id:'start1',name:'Start 1, personlig utstyr i bigården',p:1600},{id:'start2',name:'Start 2, den første bikuba',p:2600},
+ {id:'b1',name:'Helkasse',p:270,sub:'Kubemateriell'},{id:'b2',name:'Halvkasse',p:250,sub:'Kubemateriell'},
+ {id:'b3',name:'Dronninggitter',p:175,sub:'Kubemateriell'},{id:'b4',name:'Dronninggitter, 2-delt',p:95,sub:'Kubemateriell'},
+ {id:'b5',name:'Slikkepott',p:260,sub:'Slyngerommet'},{id:'b6',name:'Rammeløfter, tang',p:110,sub:'Redskap'},
+ {id:'b7',name:'Halvramme med tråd',p:24,sub:'Kubemateriell'},{id:'b8',name:'Honningspann 20 kg',p:85,sub:'Emballasje',ref:'p20'},
+];
+const ALL={};[...JARS,...LIDS,...OTHER].forEach(x=>ALL[x.id]=x);
+const CATS=[['alle','Alle'],['rund','Runde glass'],['6kant','6-kant'],['spesial','Spesialglass'],['flasker','Flasker'],['plast','Plast og spann'],['lokk','Ekstra lokk']];
+const CATNAME={rund:'Runde glass',['6kant']:'6-kant glass',spesial:'Spesialglass',flasker:'Flasker',plast:'Plastbokser og spann',lokk:'Ekstra lokk'};
+const WEIGHTS=[30,125,150,250,350,500,700,1000,3000];
+
+const kr=n=>'kr '+n.toLocaleString('nb-NO',{minimumFractionDigits:Number.isInteger(n)?0:2,maximumFractionDigits:2});
+const gtxt=g=>g>=1000?(g/1000).toLocaleString('nb-NO')+' kg':g+' g';
+const $=s=>document.querySelector(s);
+
+// ---------- jar drawing ----------
+const S=1.05; let uid=0;
+function jarSVG(j){
+  const W=j.w*S,H=j.h*S,id='j'+(uid++),pad=2;
+  const vb=`${-pad} ${-pad} ${W+pad*2} ${H+pad*2}`;
+  const defs=`<defs>
+   <linearGradient id="${id}g" x1="0" x2="1"><stop offset="0" stop-color="#b86c12"/><stop offset=".35" stop-color="#e7a93a"/><stop offset=".6" stop-color="#f3c35c"/><stop offset="1" stop-color="#b3660f"/></linearGradient>
+   <linearGradient id="${id}l" x1="0" x2="1"><stop offset="0" stop-color="#9b7422"/><stop offset=".3" stop-color="#f6dd92"/><stop offset=".55" stop-color="#d9ac45"/><stop offset="1" stop-color="#8d6519"/></linearGradient>
+   <linearGradient id="${id}s" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset=".15" stop-color="#fff" stop-opacity=".55"/><stop offset=".24" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  </defs>`;
+  let body='',lid='',extra='',top=0,fillTop=0;
+  const cx=W/2;
+  const glass=`fill="var(--glass)" fill-opacity=".55" stroke="var(--glass-line)" stroke-width="1.2"`;
+  if(j.shape==='round'||j.shape==='dto'||j.shape==='hex'||j.shape==='design'){
+    const lidW=j.shape==='design'?W*.62:(j.lid? Math.min(j.lid*S, W*.94):W*.82);
+    const lidH=j.shape==='dto'?Math.max(16,H*.2):j.shape==='design'?H*.2:Math.max(8,H*.11);
+    const neck=Math.max(3,H*.04),lw=lidW/2*.95,sh=lidH+neck,so=Math.max(4,(cx-lw)*.9),r=Math.min(W*.14,10*S);
+    top=sh;
+    if(j.shape==='hex'){
+      body=`M${cx-lw},${lidH} V${sh} L0,${sh+so} V${H} H${W} V${sh+so} L${cx+lw},${sh} V${lidH} Z`;
+    }else{
+      body=`M${cx-lw},${lidH} V${sh} C${cx-lw},${sh+so*.6} 0,${sh+so*.3} 0,${sh+so} V${H-r} Q0,${H} ${r},${H} H${W-r} Q${W},${H} ${W},${H-r} V${sh+so} C${W},${sh+so*.3} ${cx+lw},${sh+so*.6} ${cx+lw},${sh} V${lidH} Z`;
+    }
+    fillTop=sh+so*.7;
+    if(j.shape==='design'){
+      lid=`<rect x="${cx-lidW/2}" y="${lidH*.15}" width="${lidW}" height="${lidH*.9}" rx="3" fill="#c49a6c" stroke="#8a6440" stroke-width="1"/>
+           <line x1="${cx}" y1="${-lidH*.2}" x2="${cx}" y2="${H*.72}" stroke="#a57a48" stroke-width="3" stroke-linecap="round"/>
+           <g fill="#a57a48">${[0,1,2].map(k=>`<ellipse cx="${cx}" cy="${H*.62+k*5}" rx="7" ry="2.2"/>`).join('')}</g>`;
+    }else if(j.shape==='dto'){
+      lid=`<rect x="${cx-lidW/2}" y="0" width="${lidW}" height="${lidH}" rx="3" fill="#1d1f1e"/><rect x="${cx-lidW/2}" y="${lidH*.55}" width="${lidW}" height="1" fill="#444"/>`;
+    }else{
+      lid=`<rect x="${cx-lidW/2}" y="0" width="${lidW}" height="${lidH}" rx="2.5" fill="url(#${id}l)"/>`+
+          Array.from({length:Math.floor(lidW/5)},(_,k)=>`<line x1="${cx-lidW/2+3+k*5}" x2="${cx-lidW/2+3+k*5}" y1="${lidH*.2}" y2="${lidH*.8}" stroke="rgba(0,0,0,.14)" stroke-width="1"/>`).join('');
+    }
+    if(j.shape==='hex'){extra=`<path d="M${W*.22},${sh+so} V${H} M${W*.78},${sh+so} V${H}" stroke="var(--glass-line)" stroke-width=".9" opacity=".7"/>
+      <path d="M0,${sh+so} V${H} H${W*.22} V${sh+so} Z" fill="#000" opacity=".07"/><path d="M${W*.78},${sh+so} V${H} H${W} V${sh+so} Z" fill="#000" opacity=".1"/>`;}
+  }else if(j.shape==='bottle'){
+    const neckW=W*.34,capH=H*.06,neckH=H*.2,sh=capH+neckH,so=H*.12;
+    body=`M${cx-neckW/2},${capH} V${sh} C${cx-neckW/2},${sh+so*.7} 0,${sh+so*.4} 0,${sh+so} V${H-4} Q0,${H} 4,${H} H${W-4} Q${W},${H} ${W},${H-4} V${sh+so} C${W},${sh+so*.4} ${cx+neckW/2},${sh+so*.7} ${cx+neckW/2},${sh} V${capH} Z`;
+    lid=`<rect x="${cx-neckW/2-1}" y="0" width="${neckW+2}" height="${capH+H*.03}" rx="2" fill="url(#${id}l)"/>`;
+    fillTop=sh+so*1.1;
+  }else if(j.shape==='squeeze'){
+    const neckW=W*.42,capH=H*.13;
+    body=`M${cx-neckW/2},${capH} C${cx-neckW/2},${capH+H*.08} 0,${capH+H*.06} 0,${capH+H*.2} V${H-10} Q0,${H} 10,${H} H${W-10} Q${W},${H} ${W},${H-10} V${capH+H*.2} C${W},${capH+H*.06} ${cx+neckW/2},${capH+H*.08} ${cx+neckW/2},${capH} Z`;
+    lid=`<path d="M${cx-neckW/2},${capH} V${capH*.35} Q${cx},0 ${cx+neckW/2},${capH*.35} V${capH} Z" fill="#f2f2ee" stroke="#b8bcb3"/>`;
+    fillTop=capH+H*.18;
+  }else if(j.shape==='cup'){
+    const lidH=Math.max(6,H*.08),inset=W*.08;
+    body=`M0,${lidH} L${inset},${H} H${W-inset} L${W},${lidH} Z`;
+    lid=`<rect x="-2" y="0" width="${W+4}" height="${lidH+1}" rx="3" fill="#fbfbf8" stroke="#bfc3ba"/>`;
+    fillTop=lidH+H*.08;
+  }else if(j.shape==='pail'){
+    const lidH=H*.07,inset=W*.07;
+    body=`M0,${lidH} L${inset},${H} H${W-inset} L${W},${lidH} Z`;
+    lid=`<rect x="-2" y="0" width="${W+4}" height="${lidH+2}" rx="3" fill="#fbfbf8" stroke="#bfc3ba"/>`;
+    extra=`<path d="M${W*.06},${H*.2} Q${cx},${H*.62} ${W*.94},${H*.2}" fill="none" stroke="#9aa096" stroke-width="2.5"/>
+           <rect x="${W*.25}" y="${H*.4}" width="${W*.5}" height="${H*.22}" rx="4" fill="#fff" stroke="#d6d8cf"/>
+           <text x="${cx}" y="${H*.535}" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="${Math.max(8,W*.08)}" fill="#8a6519">HONNING</text>`;
+    return `<svg width="${W+pad*2}" height="${H+pad*2}" viewBox="${vb}" aria-hidden="true">${defs}<path d="${body}" fill="#f7f7f3" stroke="#bfc3ba" stroke-width="1.2"/><path d="${body}" fill="url(#${id}s)"/>${extra}${lid}</svg>`;
+  }
+  const fillH=H-fillTop;
+  const honey=`<clipPath id="${id}c"><path d="${body}"/></clipPath>
+    <g clip-path="url(#${id}c)"><rect class="honey-fill" x="-2" y="${fillTop}" width="${W+4}" height="${fillH+2}" fill="url(#${id}g)"/>
+    <rect x="-2" y="${fillTop}" width="${W+4}" height="2" fill="#f8d98a" opacity=".7" class="honey-fill"/></g>`;
+  return `<svg width="${W+pad*2}" height="${H+pad*2}" viewBox="${vb}" aria-hidden="true">${defs}${honey}<path d="${body}" ${glass}/>${extra}<path d="${body}" fill="url(#${id}s)"/>${lid}</svg>`;
+}
+
+// ---------- state ----------
+let cat='alle',weight=null,sel='r405';
+let order={};
+try{order=JSON.parse(localStorage.getItem('fh-order')||'{}')||{}}catch(e){order={}}
+const save=()=>{try{localStorage.setItem('fh-order',JSON.stringify(order))}catch(e){}};
+
+// ---------- filters ----------
+const fEl=$('#filters');
+fEl.innerHTML=CATS.map(([k,v])=>`<button class="chip" id="cat-${k}" data-cat="${k}" aria-pressed="${k===cat}">${v}</button>`).join('');
+fEl.addEventListener('click',e=>{const b=e.target.closest('[data-cat]');if(!b)return;cat=b.dataset.cat;weight=null;renderAll();});
+const wEl=$('#byweight');
+wEl.insertAdjacentHTML('beforeend',WEIGHTS.map(g=>`<button id="w-${g}" data-w="${g}" aria-pressed="false">${gtxt(g)}</button>`).join(''));
+wEl.addEventListener('click',e=>{const b=e.target.closest('[data-w]');if(!b)return;const g=+b.dataset.w;weight=weight===g?null:g;
+  if(weight){cat='alle';const m=JARS.find(j=>j.g===weight);if(m)sel=m.id;}renderAll(true);});
+
+// ---------- shelves ----------
+function renderShelves(pour){
+  const groups=cat==='alle'?['rund','6kant','spesial','flasker','plast','lokk']:[cat];
+  $('#shelves').innerHTML=groups.map(g=>{
+    if(g==='lokk'){
+      return `<div class="shelf"><div class="shelf-label"><span>Ekstra lokk, gull</span><span>kr 3,50 stk</span></div>
+        <div class="lids">${LIDS.map(l=>`<button class="lid" data-id="${l.id}" aria-pressed="${sel===l.id}" aria-label="${l.name}"><span class="disc" style="width:${l.mm*S}px;height:${l.mm*S}px"></span><span class="lbl">${l.mm} mm</span></button>`).join('')}</div></div>`;
+    }
+    const items=JARS.filter(j=>j.cat===g);
+    return `<div class="shelf"><div class="shelf-label"><span>${CATNAME[g]}</span><span>${items.length} typer</span></div>
+      <div class="shelf-scroll"><div class="shelf-row">${items.map(j=>{
+        const dim=weight&&j.g!==weight?' dim':'';
+        return `<button class="jar${dim}${pour&&sel===j.id?' pour':''}" data-id="${j.id}" aria-pressed="${sel===j.id}" aria-label="${j.name}, ${kr(j.p)}">${jarSVG(j)}<span class="lbl">${j.short}${j.g?'<br>'+gtxt(j.g):'<br>&nbsp;'}</span></button>`;}).join('')}</div></div></div>`;
+  }).join('');
+}
+$('#shelves').addEventListener('click',e=>{const b=e.target.closest('[data-id]');if(!b)return;sel=b.dataset.id;renderAll(true);
+  if(window.innerWidth<=1020)$('#detail').scrollIntoView({behavior:'smooth',block:'start'});});
+
+// ---------- detail ----------
+function fits(mm){return JARS.filter(j=>j.lid===mm).map(j=>j.short).join(', ')}
+function renderDetail(){
+  const x=ALL[sel];const d=$('#detail');
+  const eks=x.p/1.25;
+  const isLid=x.shape==='lid';
+  const specs=isLid
+    ?`<div><dt>Diameter</dt><dd>${x.mm} mm</dd></div><div><dt>Farge</dt><dd>Gull</dd></div><div><dt>Passer</dt><dd style="font-size:14px">${JARS.filter(j=>j.lid===x.mm).length} glass</dd></div>`
+    :`<div><dt>Volum</dt><dd>${x.ml>=1000?(x.ml/1000).toLocaleString('nb-NO')+' l':x.ml+' ml'}</dd></div><div><dt>Honning</dt><dd>${x.g?gtxt(x.g):'–'}</dd></div><div><dt>Lokk</dt><dd>${x.lid?x.lid+' mm':(x.lidTxt||'–')}</dd></div>`;
+  const note=isLid?`Passer på ${fits(x.mm)}.`:(x.note||`Leveres med ${x.lid} mm gullokk. Lokket kan også kjøpes løst.`);
+  const calc=(!isLid&&x.g)?`<div class="calc"><label for="kg">Jeg har <input id="kg" type="number" inputmode="decimal" min="0" step="1" value="${x.g>=3000?100:40}"> kg honning</label><p class="out" id="calcOut"></p></div>`:'';
+  const q=isLid?50:(x.g>=3000?5:24);
+  d.innerHTML=`<span class="kind">${CATNAME[x.cat]}</span><h3>${x.name}</h3>
+    <dl class="specs">${specs}</dl>
+    <div class="price-line"><span class="big num">${kr(x.p)}</span><small>per stk inkl. mva<br>${kr(Math.round(eks*100)/100)} eks. mva</small></div>
+    <p class="note">${note}</p>${calc}
+    <div class="qty-row"><div class="stepper"><button type="button" data-step="-1" aria-label="Færre">−</button><input id="qty" type="number" inputmode="numeric" min="1" value="${q}" aria-label="Antall"><button type="button" data-step="1" aria-label="Flere">+</button></div>
+    <button class="btn btn-ink" id="addSel">Legg i bestilling</button></div>`;
+  const kg=$('#kg');
+  if(kg){const upd=()=>{const n=Math.max(0,parseFloat(kg.value)||0);const c=Math.ceil(n*1000/x.g);
+      $('#calcOut').innerHTML=c?`Det blir <b>${c.toLocaleString('nb-NO')} glass</b> à ${gtxt(x.g)}, til sammen <b>${kr(Math.round(c*x.p*100)/100)}</b>. <button class="add" id="useCalc" style="margin-top:8px">Bruk ${c.toLocaleString('nb-NO')} stk</button>`:'Skriv inn hvor mye honning du har.';
+      const u=$('#useCalc');if(u)u.onclick=()=>{$('#qty').value=c;};};
+    kg.addEventListener('input',upd);upd();}
+}
+$('#detail').addEventListener('click',e=>{
+  const s=e.target.closest('[data-step]');if(s){const q=$('#qty');const st=ALL[sel].g>=3000?1:(ALL[sel].shape==='lid'?10:12);q.value=Math.max(1,(+q.value||0)+(+s.dataset.step)*st);}
+  if(e.target.closest('#addSel')){add(sel,Math.max(1,parseInt($('#qty').value)||1));}
+});
+
+// ---------- order ----------
+function add(id,n=1){order[id]=(order[id]||0)+n;save();renderOrder();toast(`${n} × ${ALL[id].name.split(',')[0]} lagt til`);
+  document.querySelectorAll(`[data-add="${id}"]`).forEach(b=>{b.classList.add('done');b.textContent='Lagt til';setTimeout(()=>{b.classList.remove('done');b.textContent='Legg til'},1600)});}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-add]');if(b)add(b.dataset.add,1);});
+function renderOrder(){
+  const ids=Object.keys(order).filter(k=>order[k]>0&&ALL[k]);
+  let sum=0,count=0;
+  $('#lines').innerHTML=ids.length?ids.map(k=>{const x=ALL[k],t=x.p*order[k];sum+=t;count+=order[k];
+    return `<li><span class="q num">${order[k]}×</span><span class="t">${x.name}</span><span class="s num">${kr(Math.round(t*100)/100)}</span><button class="x" data-rm="${k}" aria-label="Fjern ${x.name}">×</button></li>`}).join('')
+    :`<li class="empty" style="display:block">Listen er tom. Velg glass over, eller legg til honning og utstyr.</li>`;
+  sum=Math.round(sum*100)/100;
+  $('#sum').textContent=kr(sum);
+  $('#cartN').textContent=ids.length;
+  const lines=ids.map(k=>`- ${order[k]} × ${ALL[k].name} (${kr(ALL[k].p)} stk)`).join('\n');
+  $('#mailtext').textContent=`Hei!\n\nJeg vil gjerne bestille:\n${lines||'- (ingen varer ennå)'}\n\nSum ca. ${kr(sum)} inkl. mva, frakt kommer i tillegg.\n\nNavn:\nAdresse:\nMobil (for varsel fra Posten):\nHenter selv / send med Posten:`;
+  $('#dock').classList.toggle('on',ids.length>0);
+  $('#dockTxt').textContent=`${ids.length} ${ids.length===1?'vare':'varer'} · ${kr(sum)}`;
+}
+$('#lines').addEventListener('click',e=>{const b=e.target.closest('[data-rm]');if(!b)return;delete order[b.dataset.rm];save();renderOrder();});
+function copyText(txt,btn,label){
+  const done=()=>{toast('Kopiert');if(btn){const o=btn.textContent;btn.textContent=label||'Kopiert';setTimeout(()=>btn.textContent=o,1600)}};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(()=>sel2(btn))}else sel2(btn);
+}
+function sel2(btn){const el=$('#mailtext');const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);toast('Merket, trykk kopier')}
+$('#copyOrder').addEventListener('click',e=>copyText($('#mailtext').textContent,e.currentTarget,'Kopiert'));
+document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',()=>copyText($('#'+b.dataset.copy).textContent,b,'Kopiert')));
+
+let tt;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('on'),1800);}
+
+// ---------- best sellers ----------
+$('#best').innerHTML=OTHER.filter(o=>o.id.startsWith('b')&&!o.ref).map(o=>`<div class="it"><div class="nm">${o.name}<span>${o.sub}</span></div><span class="pr num">${kr(o.p)}</span><button class="add" data-add="${o.id}">Legg til</button></div>`).join('');
+
+function renderAll(pour){
+  document.querySelectorAll('[data-cat]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.cat===cat));
+  document.querySelectorAll('[data-w]').forEach(b=>b.setAttribute('aria-pressed',+b.dataset.w===weight));
+  if(cat!=='alle'){const inCat=cat==='lokk'?LIDS:JARS.filter(j=>j.cat===cat);if(!inCat.some(x=>x.id===sel))sel=inCat[0].id;}
+  renderShelves(pour);renderDetail();
+}
+renderAll(false);renderOrder();
+})();
+</script>
+</body>
+</html>
